@@ -1,0 +1,112 @@
+---
+title: "İlk API Çağrısı"
+description: "API anahtarınızı kullanarak ilk API isteğimizi gönderelim."
+icon: "code"
+---
+
+1. API Anahtarınızı alın: [https://llm.gen.tr/dash/#api-keys](ok)
+1. API bağlantısı olarak: https://llm.gen.tr/v1 adresini kullanın.
+
+## Metin Tamamlama
+
+API URL'si: https://llm.gen.tr/v1/chat/completions
+
+<CodeGroup>
+
+```shellscript HTTP expandable lines
+POST /v1/chat/completions HTTP/1.1
+Host: llm.gen.tr
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer YOUR_SECRET_TOKEN
+
+{
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Merhaba"
+    }
+  ]
+}
+```
+
+
+```shellscript Curl expandable lines
+curl https://llm.gen.tr/v1/chat/completions \
+  --request POST \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer YOUR_SECRET_TOKEN' \
+  --data '{
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Merhaba"
+    }
+  ]
+}'
+```
+
+
+```javascript JavaScript expandable lines
+fetch('https://llm.gen.tr/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    Authorization: 'Bearer YOUR_SECRET_TOKEN'
+  },
+  body: JSON.stringify({
+    model: 'gemini-2.5-flash-lite',
+    messages: [
+      {
+        role: 'user',
+        content: 'Merhaba'
+      }
+    ]
+  })
+})
+```
+
+```python Python expandable lines
+requests.post("https://llm.gen.tr/v1/chat/completions",
+    headers={
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Authorization": "Bearer YOUR_SECRET_TOKEN"
+    },
+    json={
+      "model": "gemini-2.5-flash-lite",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Merhaba"
+        }
+      ]
+    }
+)
+```
+
+```php PHP expandable lines
+$ch = curl_init("https://llm.gen.tr/v1/chat/completions");
+
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json', 'Accept: application/json', 'Authorization: Bearer YOUR_SECRET_TOKEN']);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+  'model' => 'gemini-2.5-flash-lite',
+  'messages' => [
+    [
+      'role' => 'user',
+      'content' => 'Merhaba'
+    ]
+  ]
+]));
+
+curl_exec($ch);
+
+curl_close($ch);
+```
+
+</CodeGroup>

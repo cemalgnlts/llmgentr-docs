@@ -1,38 +1,24 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "linden",
   "name": "Dökümanlar",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4385be",
+    "light": "#4385be",
+    "dark": "#4385be"
   },
   "favicon": "/icon-512-maskable.png",
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
-        }
-      ]
-    },
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Rehberler",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Başlarken",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "first-api-call"
             ]
           }
         ]
@@ -40,7 +26,7 @@
       {
         "tab": "API reference",
         "icon": "code",
-        "openapi": "https://llm.gen.tr/openapi",
+        "openapi": "api-reference/openapi.json",
         "groups": [
           {
             "group": "API documentation",
@@ -61,14 +47,11 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "logo": "/icon-512.png",
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Destek",
         "href": "mailto:destek@llm.gen.tr"
       }
     ],
@@ -92,13 +75,26 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://llm.gen.tr",
+      "telegram": "https://t.me/llmgentr"
     }
   },
   "description": "LLM API'si için dökümantasyon sayfası.",
   "fonts": {
     "family": "Space Grotesk"
+  },
+  "background": {
+    "color": {
+      "light": "#cecdc3",
+      "dark": "#1c1b1a"
+    }
+  },
+  "appearance": {
+    "strict": true,
+    "default": "dark"
+  },
+  "banner": {
+    "dismissible": true,
+    "content": "Your banner message here"
   }
 }
