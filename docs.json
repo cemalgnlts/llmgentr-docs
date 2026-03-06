@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "Dökümanlar",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/icon-512-maskable.png",
   "navigation": {
     "global": {
       "anchors": [
@@ -34,28 +34,13 @@
               "quickstart",
               "development"
             ]
-          },
-          {
-            "group": "Customization",
-            "openapi": "https://llm.gen.tr/openapi/",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
           }
         ]
       },
       {
         "tab": "API reference",
+        "icon": "code",
+        "openapi": "https://llm.gen.tr/openapi",
         "groups": [
           {
             "group": "API documentation",
@@ -84,7 +69,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:destek@llm.gen.tr"
       }
     ],
     "primary": {
@@ -111,5 +96,9 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "description": "LLM API'si için dökümantasyon sayfası.",
+  "fonts": {
+    "family": "Space Grotesk"
   }
 }
