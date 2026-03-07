@@ -16,7 +16,7 @@
           {
             "group": "Başlarken",
             "pages": [
-              "index",
+              "giris",
               "quickstart",
               "first-api-call"
             ]
@@ -36,7 +36,7 @@
         "tab": "API reference",
         "icon": "code",
         "hidden": true,
-        "openapi": "api-reference/openapi.json",
+        "openapi": "https://llm.gen.tr/openapi",
         "groups": [
           {
             "group": "API documentation",
