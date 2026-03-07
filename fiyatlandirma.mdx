@@ -3,7 +3,7 @@ title: "Fiyatlandırma"
 icon: "money-bill"
 ---
 
-Fiyatlandırmanın nasıl çalıştığını ve sizden nasıl ücret kesildiği hakkında bilgier.
+Fiyatlandırmanın nasıl çalıştığını ve sizden nasıl ücret kesildiği hakkında bilgiler.
 
 ## Nasıl Kredi Yüklerim
 
@@ -11,7 +11,7 @@ Fiyatlandırmanın nasıl çalıştığını ve sizden nasıl ücret kesildiği 
 
 **Ödeme yap** düğmesine bastıktan sonra kart bilgilerinizi girip hesabınıza kredi yükleyebilirsiniz. Şu anda 1 kredi = 1 TL'ye eşittir. Kredi diye hitap ettiğimiz para birimi TL'dir ₺ (<Icon icon="turkish-lira-sign" />) ikonu ile gösterilir.
 
-## Krediler Ne İşe Yara
+## Krediler Ne İşe Yarar?
 
 _Kullandığın kadar öde_ ve _aylık abonelik_ ile hesabınızdaki krediler model isteklerinde tüketilir.
 
@@ -21,7 +21,7 @@ Hesabınıza yüklediğiniz krediler siz kullanmadıkça tükenmez ve son kullan
 
 ### Aylık Abonelik Modeli
 
-Aylık sabit bir ücret karşılığında hesabınızdan kredi eksiltilir ve ID'si **:code** ile biten modellerde kullanabileceğiniz günlük istek hakları kullanabilirsiniz. Şu anda bu fiyatlandırmayı aşağıdaki modeller destekiyor
+Aylık sabit bir ücret karşılığında hesabınızdan kredi eksiltilir ve ID'si **:code** ile biten modellerde kullanabileceğiniz günlük istek hakları kullanabilirsiniz. Şu anda bu fiyatlandırmayı sadece aşağıdaki modeller destekliyor:
 
 1. glm-5:code
 2. kimi-k2.5:code
@@ -33,7 +33,7 @@ Genel kullanımda kullandığın kadar öde modeli daha iyi bir seçimdir ancak 
 
 | Ödeme Modeli          | Kullanım alanı                                     |
 | --------------------- | -------------------------------------------------- |
-| Kullandığın kadar öde | Genel amaçlı; metin oluştur, metin işle, sobet et. |
+| Kullandığın kadar öde | Genel amaçlı; metin oluştur, metin işle, sohbet et. |
 | Aylık abonelik        | Kodlama ve OpenClaw türü yüksek tüketim için.      |
 
 ## Token Bazlı Fiyatlandırma
@@ -59,18 +59,18 @@ AI araçlarının birim fiyatını belirler.
 
 ### Girdi ve Çıktı Tokeni Farkı
 
-Heaplamaya iki türlü token dahildir biri girdi (input) diğer ise çıktı (output) tokeni.
+Hesaplamaya iki tür token dahildir: Biri girdi (input), diğeri ise çıktı (output) tokenidir.
 
 | Türü         | Ne işe yarar                      | Fiyatı    |
 | ------------ | --------------------------------- | --------- |
-| Girdi tokeni | Sizin AI'ye gönderdiğniz içerik   | Düşüktür  |
-| Çıktı tokeni | AI'nin sizin için ürettiği içerik | Yüksektir |
+| Girdi tokeni | Sizin AI'ye gönderdiğiniz içerik   | Daha düşüktür  |
+| Çıktı tokeni | AI'nin sizin için ürettiği içerik | Daha yüksektir |
 
-Çıktı tokeni daha pahallıdır çünkü bilgisayarın daha çok kaynak tüketmesine neden olur. Her çıktı token öncesindeki tokenlerin işlenmesinden oluşur.
+Çıktı tokeni daha pahalıdır çünkü yapay zekanın her yeni kelimeyi üretirken önceki tüm bağlamı tekrar işlemesi ve daha fazla işlem gücü (GPU) tüketmesi gerekir.
 
 ### Token Ücreti Nasıl Hesaplanır
 
-Aşağıda örnek bir model isteğinin kullanım sonucu var. Bu sonucu kullanarak kedniniz de bir hesaplama yapabilirsiniz.
+Aşağıda örnek bir model isteğinin kullanım sonucu var. Bu sonucu kullanarak kendiniz de bir hesaplama yapabilirsiniz.
 
 ```json
 {
