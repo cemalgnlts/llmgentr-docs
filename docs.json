@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "linden",
-  "name": "Dökümanlar",
+  "name": "LLM | Dökümanlar",
   "colors": {
-    "primary": "#4385be",
-    "light": "#4385be",
-    "dark": "#4385be"
+    "primary": "#6ecfef",
+    "light": "#6ecfef",
+    "dark": "#6ecfef"
   },
-  "favicon": "/icon-512-maskable.png",
+  "favicon": "/icon-512.png",
   "navigation": {
     "tabs": [
       {
@@ -26,6 +26,7 @@
       {
         "tab": "API reference",
         "icon": "code",
+        "hidden": true,
         "openapi": "api-reference/openapi.json",
         "groups": [
           {
@@ -40,12 +41,7 @@
   },
   "logo": "/icon-512.png",
   "navbar": {
-    "links": [
-      {
-        "label": "Destek",
-        "href": "mailto:destek@llm.gen.tr"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Panel",
@@ -66,7 +62,6 @@
   },
   "footer": {
     "socials": {
-      "website": "https://llm.gen.tr",
       "telegram": "https://t.me/llmgentr"
     }
   },
@@ -76,16 +71,12 @@
   },
   "background": {
     "color": {
-      "light": "#cecdc3",
-      "dark": "#1c1b1a"
+      "light": "#e8e8e8",
+      "dark": "#1b1b1d"
     }
   },
   "appearance": {
     "strict": true,
     "default": "dark"
-  },
-  "banner": {
-    "dismissible": true,
-    "content": "Your banner message here"
   }
 }

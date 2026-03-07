@@ -1,36 +1,38 @@
 ---
 title: "İlk API Çağrısı"
-description: "API anahtarınızı kullanarak ilk API isteğimizi gönderelim."
+description: "ilk API isteğimizi göndermek için gereken adımlar."
 icon: "code"
 ---
 
-1. API Anahtarınızı alın: [https://llm.gen.tr/dash/#api-keys](ok)
-1. API bağlantısı olarak: https://llm.gen.tr/v1 adresini kullanın.
+Eğer API entegrasyonu konusunda çok yeniyseniz önce [hızlı başlangıç](/quickstart) kısmını okuyun. 
 
-## Metin Tamamlama
+## Genel Kullanım
 
-API URL'si: https://llm.gen.tr/v1/chat/completions
+Aşağıda kendi programınıza eklemeniz için gereken bilgiler yer alıyor
 
-<CodeGroup>
+1. `https://llm.gen.tr/v1/chat/completions` adresine `POST` isteği göndermelisiniz.
+2. `Authorization` başlığına API anahtarınızı ekleyin.
+3. `Content-Type` başlığını `application/json` olarak ayarlayın.
+4. **Body** içinde JSON isteiğinizi gönderin.
 
-```shellscript HTTP expandable lines
-POST /v1/chat/completions HTTP/1.1
-Host: llm.gen.tr
+```http
+POST https://llm.gen.tr/v1/chat/completions
+Authorization: Bearer API_ANAHTRINIZ
 Content-Type: application/json
-Accept: application/json
-Authorization: Bearer YOUR_SECRET_TOKEN
 
 {
-  "model": "gemini-2.5-flash-lite",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Merhaba"
-    }
-  ]
+	"model": "gemini-2.5-flash-lite",
+	"messages": [
+		{ "role": "user", "content": "Merhaba" }
+	]
 }
 ```
 
+## Metin Tamamlama
+
+Aşağıda birkaç yazılım dili için örnek kullanım vardır.
+
+<CodeGroup>
 
 ```shellscript Curl expandable lines
 curl https://llm.gen.tr/v1/chat/completions \
@@ -70,6 +72,7 @@ fetch('https://llm.gen.tr/v1/chat/completions', {
 })
 ```
 
+
 ```python Python expandable lines
 requests.post("https://llm.gen.tr/v1/chat/completions",
     headers={
@@ -88,6 +91,7 @@ requests.post("https://llm.gen.tr/v1/chat/completions",
     }
 )
 ```
+
 
 ```php PHP expandable lines
 $ch = curl_init("https://llm.gen.tr/v1/chat/completions");
@@ -110,3 +114,19 @@ curl_close($ch);
 ```
 
 </CodeGroup>
+
+## Prompt
+
+Entegrasyonu herhangi bir AI modeline yaptırmak istiyorsanız aşağıdaki prompt'u kullanabilirsiniz.
+
+<Prompt description={`AI ile API entegrasyonu`} icon="robot" actions={["copy","cursor"]}>
+  OpenAI standartlarına tam uyumlu olan özel bir AI API Gateway servisine 'Chat Completions' isteği atacak bir kod yaz.
+  
+  Kullanman gereken API detayları:
+  - Base URL: https://llm.gen.tr
+  - API Key: sk-llm-
+  - Model Adı: gemini-2.5-flash-lite
+  - Endpoint: /v1/chat/completions
+  
+  Önemli Not: İstemciyi (client) başlatırken varsayılan OpenAI adresini kullanmak yerine, base_url (veya kullandığın dildeki karşılığı) parametresini yukarıda verdiğim Base URL adresiyle değiştirmeyi (override etmeyi) unutma.
+</Prompt>
