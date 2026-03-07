@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "linden",
-  "name": "LLM | Dökümanlar",
+  "name": "LLM | Dökümanlar",
   "colors": {
-    "primary": "#6ecfef",
-    "light": "#6ecfef",
-    "dark": "#6ecfef"
+    "primary": "#31a9de",
+    "light": "#31a9de",
+    "dark": "#31a9de"
   },
   "favicon": "/icon-512.png",
   "navigation": {
@@ -25,7 +25,9 @@
             "group": "Rehberler",
             "pages": [
               "fiyatlandirma",
-              "modeller"
+              "modeller",
+              "kodlama-plani",
+              "test-alani"
             ]
           }
         ]
@@ -75,7 +77,18 @@
   "footer": {
     "socials": {
       "telegram": "https://t.me/llmgentr"
-    }
+    },
+    "links": [
+      {
+        "header": "Bağlantılar",
+        "items": [
+          {
+            "label": "Durum sayfası",
+            "href": "https://status.llm.gen.tr"
+          }
+        ]
+      }
+    ]
   },
   "description": "LLM API'si için dökümantasyon sayfası.",
   "fonts": {
