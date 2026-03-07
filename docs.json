@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Rehberler",
+        "tab": "Dökümanlar",
         "groups": [
           {
             "group": "Başlarken",
@@ -19,6 +19,13 @@
               "index",
               "quickstart",
               "first-api-call"
+            ]
+          },
+          {
+            "group": "Rehberler",
+            "pages": [
+              "fiyatlandirma",
+              "modeller"
             ]
           }
         ]
@@ -41,7 +48,12 @@
   },
   "logo": "/icon-512.png",
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "Modeller",
+        "href": "https://llm.gen.tr/models"
+      }
+    ],
     "primary": {
       "type": "button",
       "label": "Panel",
@@ -78,5 +90,11 @@
   "appearance": {
     "strict": true,
     "default": "dark"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "search": {
+    "prompt": "Ara veya sor..."
   }
 }
