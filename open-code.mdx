@@ -1,0 +1,51 @@
+---
+title: "OpenCode"
+---
+
+OpenCode LLM'yi sağlayıcı olarak ekleme.
+
+<Steps>
+  <Step title="OpenCode indirin">
+    İndirme işlemlerini kendi sayfasından yapabilirisiniz: https://opencode.ai/tr/download
+  </Step>
+  <Step title="Konfigürasyonu Yapın">
+    1. Ev dizininizde bulunan konfigürasyon dosyasını açın: `~/.config/opencode/opencode.json`
+    2. Dosyayı aşağıdaki şekilde güncelleyin.
+
+       ```json
+       {
+         "$schema": "https://opencode.ai/config.json",
+         "default_agent": "plan",
+         "provider": {
+           "llm": {
+             "name": "LLM",
+             "npm": "@ai-sdk/openai-compatible",
+             "models": {
+               "glm-5:code": {
+                 "name": "GLM 5"
+               },
+               "minimax-m2.5:code": {
+                 "name": "MiniMax M2.5"
+               },
+               "kimi-k2.5:code": {
+                 "name": "Kimi K-2.5"
+               }
+             },
+             "options": {
+               "baseURL": "https://llm.gen.tr/v1"
+             }
+           }
+         }
+       }
+       ```
+  </Step>
+  <Step title="Model seçimi">
+    1. OpenCodu başlatın.
+    2. `/models` yazıp <kbd>enter</kbd>'e basın.
+    3. Açılan listede LLM yazan modellerden birini seçin.
+
+    <Info>
+      Ekstra olarak komut penceresiniz açıp( <kbd>CTRL + p</kbd>) yapıp `models` yazıp değiştirebilirsiniz.
+    </Info>
+  </Step>
+</Steps>

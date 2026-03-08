@@ -1,0 +1,40 @@
+---
+title: "Claude Code"
+---
+
+LLM modellerini Claude Code ile kullanın.
+
+<Steps>
+  <Step title="Claude Code kurulumunu yapın.">
+    Kurulum için resmi dökümantasyonu takip edin: https://code.claude.com/docs/en/overview
+  </Step>
+  <Step title="API Bilgilerini ekleyin.">
+    Ev klasörünüzde bulunan `~/.claude/settings.json` dosyasını açın ve içeriği bu şekilde güncelleyin:
+
+    ```json
+    {
+        "env": {
+            "ANTHROPIC_AUTH_TOKEN": "API_ANAHTARI",
+            "ANTHROPIC_BASE_URL": "https://llm.gen.tr",
+            "API_TIMEOUT_MS": "100000"
+        }
+    }
+    ```
+  </Step>
+  <Step title="Claude Code başlatın.">
+    Proje klasörünüze geçin Claude Code'u başlatın:c
+
+    ```shellscript
+    claude
+    ```
+  </Step>
+  <Step title="Test edin.">
+    Aşağıdaki komutu çalıştırarak eklediğimiz bilgilerin olduğunda emin olun.
+
+    ```text
+    /status
+    ```
+  </Step>
+</Steps>
+
+ 

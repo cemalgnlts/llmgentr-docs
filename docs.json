@@ -33,6 +33,17 @@
         ]
       },
       {
+        "tab": "Entegrasyonlar",
+        "pages": [
+          "genel",
+          "claude-code",
+          "open-code",
+          "roo-code",
+          "kilo-code",
+          "open-claw"
+        ]
+      },
+      {
         "tab": "API reference",
         "icon": "code",
         "hidden": true,
