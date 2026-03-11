@@ -1,0 +1,44 @@
+---
+title: "n8n"
+icon: "plug"
+---
+
+LLM ile n8n otomasyonunuz için AI entegrasyonu.
+
+## Hesap Bilgilerinizi Ekleme
+
+1. Ana ekranda iken **Credentials** kısmına gidin.
+2. **Add first credential** veya sağ üstten **Create credential** düğmesine basın.
+3. Arama kısmına **openai** yazın ve **OpenAi** seçeneğine basıp **continue** diyin.
+4. Hesap bilgileriniz için gerekli alanları doldurun.
+   - **API Key**: [Panel](https://llm.gen.tr/dash#api-keys)'den aldığınız API anahtarını ekleyin.
+   - **Base URL**: `https://llm.gen.tr/v1`
+5. Daha sonra **save** diyin ve diyaloğu kapatın. 
+
+Bundan sonra AI modeli eklemek istediğinizde **OpenAi** hesabını seçmeniz yeterli olacaktır.
+
+## AI Agent Model Kurulumu
+
+<Steps>
+  <Step title="AI Node listesini açın">
+    Node olarak **AI Agent**  seçenğini kullanın.
+  </Step>
+  <Step title="Model seçimi">
+    1. **Chat Model** düğmesine basın.
+    2. **OpenAi Chat Model** öğesini seçin.
+    3. **Credential to connect with** listesinden **OpenAi account** öğesini seçin.
+
+    **From the list** seçeneği ile;
+
+    - Listeden bir model seçin (örnek: `gpt-5-nano`).
+
+    **By ID** seçeneği ile;
+
+    **Model adı** olarak [Models](https://llm.gen.tr/models) sayfasından bir tane seçin (örnek: `gpt-5-nano`).
+
+    <Warning>
+      **Use Responses API** seçeneğini devre dışı bırakın.
+    </Warning>
+    Diyaloğu kapatabilirsiniz artık kurulumunuz tamamlanmıştır.
+  </Step>
+</Steps>
