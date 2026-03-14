@@ -16,18 +16,18 @@
           {
             "group": "Başlarken",
             "pages": [
-              "giris",
-              "quickstart",
-              "first-api-call"
+              "get-started/welcome",
+              "get-started/quickstart",
+              "get-started/first-api-call"
             ]
           },
           {
             "group": "Rehberler",
             "pages": [
-              "fiyatlandirma",
-              "modeller",
-              "kodlama-plani",
-              "test-alani"
+              "guides/pricing",
+              "guides/models",
+              "guides/coding-plan",
+              "guides/playground"
             ]
           }
         ]
@@ -35,13 +35,13 @@
       {
         "tab": "Entegrasyonlar",
         "pages": [
-          "genel",
-          "claude-code",
-          "open-code",
-          "roo-code",
-          "kilo-code",
-          "open-claw",
-          "n8n"
+          "integrations",
+          "integrations/claude-code",
+          "integrations/open-code",
+          "integrations/roo-code",
+          "integrations/kilo-code",
+          "integrations/open-claw",
+          "integrations/n8n"
         ]
       },
       {
