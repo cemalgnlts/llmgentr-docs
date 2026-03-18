@@ -6,18 +6,19 @@ description: "LLM modellerini Claude Code ile kullanın."
 
 <Steps>
   <Step title="Claude Code kurulumunu yapın.">
-    Kurulum için resmi dökümantasyonu takip edin: https://code.claude.com/docs/en/overview
+    Kurulum için resmi dökümantasyonu takip edin: [https://code.claude.com/docs/en/overview](https://code.claude.com/docs/en/overview)
   </Step>
   <Step title="API Bilgilerini ekleyin.">
     Ev klasörünüzde bulunan `~/.claude/settings.json` dosyasını açın ve içeriği bu şekilde güncelleyin:
 
     ```json
     {
-        "env": {
-            "ANTHROPIC_AUTH_TOKEN": "API_ANAHTARI",
-            "ANTHROPIC_BASE_URL": "https://llm.gen.tr",
-            "API_TIMEOUT_MS": "100000"
-        }
+      "env": {
+        "ANTHROPIC_AUTH_TOKEN": "sk-llm-...",
+        "ANTHROPIC_BASE_URL": "https://llm.gen.tr",
+        "API_TIMEOUT_MS": "90000"
+      },
+      "model": "glm-5:code"
     }
     ```
   </Step>
@@ -34,5 +35,7 @@ description: "LLM modellerini Claude Code ile kullanın."
     ```text
     /status
     ```
+
+    Bu komuttan sonra model kısmında `glm-5:code` yazdığını görürsek kurulum tamamlanmıştır. Modeli değiştirmek için `/model model-id:code`komutunu kullanabilirsiniz.
   </Step>
 </Steps>
