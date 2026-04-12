@@ -1,0 +1,80 @@
+---
+title: "Dosya Okuma"
+icon: "eye"
+description: "Modellere metin dışında girdi gönderebilme."
+---
+
+Bazı modeller metin dışında resim, PDF, ses ve video içeriği de kabul ederler.
+
+## Örnekler
+
+Her modelin her girdiyi desteklemediğini unutmayın hangi modellerin hangi girdileri desteklediğini öğrenmek için model sayfasına bakabilirsiniz.
+
+### Resim Ekleme
+
+```json highlight={8-14}
+{
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        { "type": "text", "text": "Gördüğün resmi kısaca anlat." },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "https://example.com/image.png",
+            "detail": "auto"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### PDF Ekleme
+
+```json highlight={8-14}
+{
+    "model": "gemini-2.5-flash-lite",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          { "type": "text", "text": "PDF dosyasını özetle." },
+          {
+            "type": "file",
+            "file": {
+              "filename": "file.pdf",
+              "file_data": "https://example.com/report.pdf"
+            }
+          }
+        ]
+      }
+    ]
+  }
+```
+
+### Ses Ekleme
+
+```json highlight={8-14}
+{
+    "model": "gemini-2.5-flash-lite",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          { "type": "text", "text": "Bu ses dosyasında ne anlatılıyor özetle." },
+          {
+            "type": "input_audio",
+            "input_audio": {
+              "data": "BASE64",
+              "format": "wav"
+            }
+          }
+        ]
+      }
+    ]
+  }
+```

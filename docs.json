@@ -29,6 +29,13 @@
               "guides/coding-plan",
               "guides/playground"
             ]
+          },
+          {
+            "group": "Model Yetenekleri",
+            "pages": [
+              "internette-arama-yapma",
+              "dosya-okuma"
+            ]
           }
         ]
       },

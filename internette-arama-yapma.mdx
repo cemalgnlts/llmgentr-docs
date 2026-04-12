@@ -1,0 +1,51 @@
+---
+title: "İnternette Arama Yapma"
+description: "Modelin internette canlı arama yapmasını nasıl sağlaycağımızı öğrenelim."
+icon: "globe"
+---
+
+İnternette arama yapabilme modelin bilmediği konuları veya eski bilgilerini kullanması yerine canlı olarak yeni bilgiler öğrenmesine olanak sağlar.
+
+## Ne Zaman Kullanılmalı?
+
+- Modelin bilgisi hatalı veya eski ise.
+- Modelin bilmediği bir bilgi gerekiyorsa.
+- Yeni oluşturulmuş bir içerik gerekiyorsa.
+
+## Hangi Modeller İle Kullanılabilir
+
+İnternete erişebilen iki çeşit model vardır:
+
+1. Varsayılan olarak arama yapma özelliği olan.
+2. İnternete erişmesi için `web_search_options`özelliğine sahip olan modeller.
+
+<Info>
+  Model sayfasında her modelin özellikleri sağ üst kısımda yer alır dünya (<Icon icon="globe" />) ikonu olan modeller internette arama yapabilir.
+</Info>
+
+#### Varsayılan olarak arama yapabilenler
+
+Sadece sonar modelleri için geçerlidir bu model ek bir özellik etkinleştirmesine gerek kalmadan internette arama yapmaya başlayabilir.
+
+#### İnternet erişimini etkinleştirmeniz gereken modeller
+
+**gpt-4o-mini** gibi modeller için `"web_search_options": {}` özelliğini kullanmanız gerekir.
+
+## Kullanım Örneği
+
+```json
+{
+  "model": "gpt-4o-mini",
+  "messages": [
+    {
+      "role": "user",
+      "content": "En son yayınlanan 3 haber başlığını getir."
+    }
+  ],
+  "web_search_options": {}
+}
+```
+
+<Info>
+  Eğer model olarak `sonar`seçseydik `web_search_options`özelliğini eklememize gerek kalmazdı.
+</Info>
